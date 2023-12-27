@@ -4,10 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NBA Player Draft Generator</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
   <header>
-    <h1>NBA Player Draft Generator</h1>
+    <div class="container">
+      <h1>NBA Player Draft Generator</h1>
+    </div>
   </header>
  
   <nav id="navbar">
@@ -21,28 +25,29 @@
   </nav>
 
   <!-- form for how many players to generate -->
-  <form action="process.php" method = "POST">
-    <div>  
-      <label for = 'num-players'>How many players would you like to generate?</label>
-      <input type="number" id = 'num-players' name='num-players' min='1' max='12'>
-    </div>
-      
-    <!-- current button -->
-    <div>
-      <label for="current">Current</label>
-      <input type="checkbox" name = "current" id="current">
-    </div>
-    <!-- historic button -->
-    <div>
-      <label for="historic">Historic</label>
-      <input type="checkbox" name = "historic" id="historic">
-    </div>
-    <br>
-      <input type="submit" value="Submit">
+  <div class="container" id = "instructions">
+    <form action="process.php" method = "POST">
+      <p>Instructions: Please specify the number of players and NBA player type to generate!</p>
+      <hr>
+      <div>
+        <label for = 'num-players'>Number of Players: </label>
+        <input type="number" id = 'num-players' name='num-players' min='1' max='12'>
+      </div>
 
-  </form>
+      <div>
+        <label for="pool-select">NBA Player Type: </label>
+        <select name="player-pol" id="pool-select">
+          <option value=""></option>
+          <option value="current">Only Current NBA Players</option>
+          <option value="historic">Only Historic NBA Players</option>
+          <option value="all">All NBA Players</option>
+        </select>
+      </div>
+      <input type="submit" value="Generate!">
+    </form>
+  </div>
 
-  <aside id = "account">
+  <aside id = "create-account">
     <p>Create an account to save your progress!</p>
     <form action="process.php" method = "POST">
       <div>
@@ -51,67 +56,70 @@
       <div>
         <input type="password" name="password" placeholder="Password">
       </div>
-      <br>
-      <input type="submit" value ="Submit">
+      <!-- <br> -->
+      <input type="submit" value ="Create Account">
     </form>
   </aside>
 
   <!-- sidebar of different player's drafts (only if all star) -->
   <aside id = "leaderboard"> 
     <p>Today's Leaderboard</p>
-    <table><thead>
+    <table>
+      <thead>
       <tr>
-        <th></th>
+        <th>Rank</th>
         <th>Username</th>
         <th>Score</th>
         <th>Date</th>
-        <tbody>
-          <tr>
-            <th>1. </th>
-            <td>drew</td>
-            <td>50</td>
-            <td>Dec. 26, 2023</td>
-          </tr>
-          <tr>
-            <th>2. </th>
-            <td>sarah</td>
-            <td>49</td>
-            <td>Dec. 26, 2023</td>
-          </tr>
-          <tr>
-            <th>3. </th>
-          </tr>
-          <tr>
-            <th>4. </th>
-          </tr>
-          <tr>
-            <th>5. </th>
-          </tr>
-          <tr>
-            <th>6. </th>
-          </tr>
-          <tr>
-            <th>7. </th>
-          </tr>
-          <tr>
-            <th>8. </th>
-          </tr>
-          <tr>
-            <th>9. </th>
-          </tr>
-          <tr>
-            <th>10. </th>
-          </tr>
-        </tbody>
-      </tr>
-    </thead></table>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>1. </th>
+          <td>drew</td>
+          <td>50</td>
+          <td>Dec. 26, 2023</td>
+        </tr>
+        <tr>
+          <th>2. </th>
+          <td>sarah</td>
+          <td>49</td>
+          <td>Dec. 26, 2023</td>
+        </tr>
+        <tr>
+          <th>3. </th>
+        </tr>
+        <tr>
+          <th>4. </th>
+        </tr>
+        <tr>
+          <th>5. </th>
+        </tr>
+        <tr>
+          <th>6. </th>
+        </tr>
+        <tr>
+          <th>7. </th>
+        </tr>
+        <tr>
+          <th>8. </th>
+        </tr>
+        <tr>
+          <th>9. </th>
+        </tr>
+        <tr>
+          <th>10. </th>
+        </tr>
+      </tbody>
+    </table>
 
   </aside>
 
-
+<div class = "container">
   <form action="process.php">
     <p>What do you think of this site?</p><textarea name="comments" cols="30" rows="10"></textarea>
   </form>
+</div>
 
 </body>
 </html>

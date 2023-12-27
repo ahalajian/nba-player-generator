@@ -1,0 +1,56 @@
+body {
+  background-color: #142d4c;
+  color: #fff;
+  font: normal 16px Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+header h1 {
+  text-align: center
+}
+
+.container{
+  width: 80%;
+  margin: auto;
+}
+#navbar {
+  background-color: #385170;
+  margin-bottom: 10px;
+}
+
+#navbar ul{
+  list-style: none;
+  padding: 0;
+}
+
+#navbar li {
+  display: inline;
+  padding: 5px;
+}
+
+#navbar a{
+  text-decoration: none;
+  color: #fff;
+}
+
+#navbar a:hover{
+  background-color: rgb(214, 187, 141);
+}
+
+#instructions {
+  background-color: #385170;
+  text-align: center;
+}
+
+table, th, td{
+  border: 1px solid #000;
+}
+
+/* #create-account {
+
+} */
