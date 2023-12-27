@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NBA Player Draft Generator</title>
+</head>
+<body>
+  <header>
+    <h1>NBA Player Draft Generator</h1>
+  </header>
+ 
+  <nav id="navbar">
+    <div class="container">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Draft</a></li>
+        <li><a href="#">Guess the Player</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- form for how many players to generate -->
+  <form action="process.php" method = "POST">
+    <div>  
+      <label for = 'num-players'>How many players would you like to generate?</label>
+      <input type="number" id = 'num-players' name='num-players' min='1' max='12'>
+    </div>
+      
+    <!-- current button -->
+    <div>
+      <label for="current">Current</label>
+      <input type="checkbox" name = "current" id="current">
+    </div>
+    <!-- historic button -->
+    <div>
+      <label for="historic">Historic</label>
+      <input type="checkbox" name = "historic" id="historic">
+    </div>
+    <br>
+      <input type="submit" value="Submit">
+
+  </form>
+
+  <aside id = "account">
+    <p>Create an account to save your progress!</p>
+    <form action="process.php" method = "POST">
+      <div>
+        <input type="text" name="username" placeholder="Username">
+      </div>
+      <div>
+        <input type="password" name="password" placeholder="Password">
+      </div>
+      <br>
+      <input type="submit" value ="Submit">
+    </form>
+  </aside>
+
+  <!-- sidebar of different player's drafts (only if all star) -->
+  <aside id = "leaderboard"> 
+    <p>Today's Leaderboard</p>
+    <table><thead>
+      <tr>
+        <th></th>
+        <th>Username</th>
+        <th>Score</th>
+        <th>Date</th>
+        <tbody>
+          <tr>
+            <th>1. </th>
+            <td>drew</td>
+            <td>50</td>
+            <td>Dec. 26, 2023</td>
+          </tr>
+          <tr>
+            <th>2. </th>
+            <td>sarah</td>
+            <td>49</td>
+            <td>Dec. 26, 2023</td>
+          </tr>
+          <tr>
+            <th>3. </th>
+          </tr>
+          <tr>
+            <th>4. </th>
+          </tr>
+          <tr>
+            <th>5. </th>
+          </tr>
+          <tr>
+            <th>6. </th>
+          </tr>
+          <tr>
+            <th>7. </th>
+          </tr>
+          <tr>
+            <th>8. </th>
+          </tr>
+          <tr>
+            <th>9. </th>
+          </tr>
+          <tr>
+            <th>10. </th>
+          </tr>
+        </tbody>
+      </tr>
+    </thead></table>
+
+  </aside>
+
+
+  <form action="process.php">
+    <p>What do you think of this site?</p><textarea name="comments" cols="30" rows="10"></textarea>
+  </form>
+
+</body>
+</html>
