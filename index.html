@@ -3,74 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NBA Player Draft Generator</title>
+  <title>NBA Player Generator</title>
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://kit.fontawesome.com/5007da0f3d.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
   <header>
     <div class="container">
-      <h1>NBA Player Draft Generator</h1>
+      <h1>NBA Player Generator</h1>
     </div>
   </header>
  
-  <nav id="navbar">
+  <nav class="navbar">
     <div class="container">
-      <ul>
+      <ul class="nav-list">
         <li><a href="#">Home</a></li>
         <li><a href="#">Draft</a></li>
         <li><a href="#">Guess the Player</a></li>
+        <li><a href="#">Leaderboard</a></li>
+        <li id ="login-button"><a href="login.html"><i class="fa-solid fa-user"></i> Login</a></li>
       </ul>
     </div>
   </nav>
 
   <!-- form for how many players to generate -->
-  <div class="container" id = "instructions">
-    <form action="process.php" method = "POST">
-      <p>Instructions: Please specify the number of players and NBA player type to generate!</p>
-      <hr>
-      <div>
-        <label for = 'num-players'>Number of Players: </label>
-        <input type="number" id = 'num-players' name='num-players' min='1' max='12'>
+  <div class="container">
+    <div class="instruction-box">
+        <h5>Instructions: Please specify the number of players and NBA player type to generate!</h5>
       </div>
+  </div>
+  <div class="container">
+    <div class="selection-box">
+      <form action="process.php" method = "POST">
+        <div>
+          <label for = 'num-players'>Number of Players: </label>
+          <input type="number" id = 'num-players' name='num-players' min='1' max='12'>
+        </div>
 
-      <div>
-        <label for="pool-select">NBA Player Type: </label>
-        <select name="player-pol" id="pool-select">
-          <option value=""></option>
-          <option value="current">Only Current NBA Players</option>
-          <option value="historic">Only Historic NBA Players</option>
-          <option value="all">All NBA Players</option>
-        </select>
-      </div>
-      <input type="submit" value="Generate!">
-    </form>
+        <div>
+          <label for="pool-select">NBA Player Type: </label>
+          <select name="player-pol" id="pool-select">
+            <option value=""></option>
+            <option value="current">Only Current NBA Players</option>
+            <option value="historic">Only Historic NBA Players</option>
+            <option value="all">All NBA Players</option>
+          </select>
+        </div>
+        <input class="button" type="submit" value="Generate!">
+      </form>
+    </div>
   </div>
 
-  <aside id = "create-account">
-    <p>Create an account to save your progress!</p>
-    <form action="process.php" method = "POST">
-      <div>
-        <input type="text" name="username" placeholder="Username">
-      </div>
-      <div>
-        <input type="password" name="password" placeholder="Password">
-      </div>
-      <!-- <br> -->
-      <input type="submit" value ="Create Account">
-    </form>
-  </aside>
+
 
   <!-- sidebar of different player's drafts (only if all star) -->
-  <aside id = "leaderboard"> 
-    <p>Today's Leaderboard</p>
-    <table>
+  <div class="container">
+    <table id="leaderboard">
+      <caption>
+        Today's Leaderboard
+      </caption>
       <thead>
       <tr>
         <th>Rank</th>
         <th>Username</th>
         <th>Score</th>
-        <th>Date</th>
         </tr>
       </thead>
       <tbody>
@@ -78,13 +75,12 @@
           <th>1. </th>
           <td>drew</td>
           <td>50</td>
-          <td>Dec. 26, 2023</td>
         </tr>
         <tr>
           <th>2. </th>
-          <td>sarah</td>
+          <td>mike</td>
           <td>49</td>
-          <td>Dec. 26, 2023</td>
+        
         </tr>
         <tr>
           <th>3. </th>
@@ -112,8 +108,8 @@
         </tr>
       </tbody>
     </table>
+</div>
 
-  </aside>
 
 <div class = "container">
   <form action="process.php">
@@ -121,5 +117,10 @@
   </form>
 </div>
 
+<footer>
+  <p>Created by Andrew</p><a href="https://github.com/ahalajian" target="_blank"><i class="fa-brands fa-github"></i></a>
+  </footer>
 </body>
+
+
 </html>
