@@ -29,24 +29,25 @@ header {
 }
 
 .container{
-  width: 80%;
+  max-width: 1100px;
+  height: 100%;
   margin: auto;
   overflow: visible;
 }
 
 .navbar {
   background-color: #385170;
-  padding: 15px 0px;
+  height: 50px;
   margin-bottom: 20px;
 }
 
 .navbar li {
   display: inline;
+  padding-right: 15px;
 }
 
 .navbar a {
   font-size: 18px;
-  padding-right: 15px;
 }
 
 .navbar a:hover{
@@ -54,8 +55,15 @@ header {
   border-radius: 5px;
 }
 
+.nav-list {
+  display:flex;
+  height: 100%;
+  align-items: center;
+}
+  
+
 .nav-list li:last-child{
-  float:right;
+  margin-left: auto;
 }
 
 .button {
@@ -63,16 +71,16 @@ header {
   padding: 10px 15px;
   border-radius: 20px;
   margin-top: 10px;
+  cursor: pointer;
 }
 
 .button:hover{
   background-color: #4eb458;
-  box-shadow: 0px 0px 3px 3px #828282;
-
+  /* box-shadow: 0px 0px 3px 3px #828282; */
 }
 
-.instruction-box{
-  display: inline-block;
+.instruction-box h5{
+  text-align: center;
   border: 2px solid #7ca3dc;
   margin-bottom: 5px;
   padding: 2px;
@@ -80,19 +88,38 @@ header {
 
 .selection-box{
   background-color: #7ca3dc;
-  padding: 20px;
+  padding: 10px 15px;
   border: 2px solid 385170;
   margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.selection-box input:hover, select:hover {
+.selection-box #num-players:hover, select:hover {
   box-shadow: 0px 0px 3px 3px #828282
 }
 
-#login-button {
-  margin-left: auto;
+.player-row {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap:wrap;
 }
 
+.player {
+  padding: 10px 15px;
+  border: 2px solid #000;
+  margin: 10px;
+  text-align: center;
+  height: 300px;
+  width: 300px;
+}
+
+.player-image {
+  width: 263px;
+  height: 192px;
+  display: block;
+}
 
 table {
   float:right
