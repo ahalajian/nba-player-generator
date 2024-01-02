@@ -116,8 +116,8 @@ header {
 }
 
 .player-image {
-  width: 263px;
-  height: 192px;
+  /* width: 263px; */
+  /* height: 192px; */
   display: block;
 }
 

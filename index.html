@@ -27,8 +27,6 @@
     </div>
   </nav>
 
-  <!-- form for how many players to generate -->
-
   <div class="container">
     <div class="instruction-box">
         <h5>Instructions: Please specify the number of players and NBA player type to generate!</h5>
@@ -39,7 +37,20 @@
       <div class="selections">
         <div>
           <label for ='num-players'>Number of Players: </label>
-          <input type="number" id="num-players" name='num-players' min='1' max='12'>
+          <select id="num-players">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+          </select>
         </div>
         <div>
           <label for="player-type">NBA Player Type: </label>
@@ -59,16 +70,13 @@
 
   <div class="container">
     <div class="player-row">
-      <div class="player">LeBron James <img class="player-image" src="images/lbj.jpeg" alt=""></div>
-      <div class="player">Luka Doncic <img class="player-image" src="images/luka.avif" alt=""></div>
-      <div class="player">Kobe Bryant <img class="player-image" src="images/kobe.jpeg" alt=""></div>
+      <div class="player">LeBron James <img class="player-image" src="https://cdn.nba.com/headshots/nba/latest/260x190/2544.png" alt=""></div>
+      <div class="player">Luka Doncic <img class="player-image" src="https://cdn.nba.com/headshots/nba/latest/260x190/1629029.png" alt=""></div>
+      <div class="player">Kobe Bryant <img class="player-image" src="https://cdn.nba.com/headshots/nba/latest/260x190/977.png" alt=""></div>
     </div>
   </div>
 
-
-
-  <!-- sidebar of different player's drafts (only if all star) -->
-  <div class="container">
+<div class="container">
     <table id="leaderboard">
       <caption>
         Today's Leaderboard
@@ -129,7 +137,8 @@
 
 <footer>
   <p>Created by Andrew</p><a href="https://github.com/ahalajian" target="_blank"><i class="fa-brands fa-github"></i></a>
-  </footer>
+</footer>
+<script src="main.js"></script>
 </body>
 
 
