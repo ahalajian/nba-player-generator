@@ -1,6 +1,7 @@
 from flask import Flask, request
 import requests
 import json
+from flask_cors import CORS
 
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine
@@ -13,6 +14,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 app = Flask(__name__)
+CORS(app)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('db_uri')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -30,6 +32,10 @@ def failure_response(message, code=400):
     Failure response
     """
     return json.dumps({"error": message}), code
+
+@app.route('/endpoint/')
+def endpoint():
+  return request.headers.get('Origin')
 
 @app.route('/api/player/<int:id>/', methods=['GET'])
 def get_player(id):
